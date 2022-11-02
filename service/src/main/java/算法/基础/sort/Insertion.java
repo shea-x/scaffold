@@ -26,12 +26,14 @@ public class Insertion {
 
         for (int i = 1; i < a.length; i++) {
             for (int j = i - 1; j >= 0; j--) {
-                if (!greater(j, i)) {
-                    exec(a, j, i);
+                if (greater(a[j], a[i])) {
+                    exec(a, i, j);
+                    i--;
                 }
             }
         }
     }
+
 
 
     /**
