@@ -1,5 +1,6 @@
-/*
-package cn.netty.c1;
+package util;
+
+import io.netty.util.internal.StringUtil;
 
 import java.nio.ByteBuffer;
 
@@ -68,12 +69,10 @@ public class ByteBufferUtil {
         }
     }
 
-    */
-/**
+    /**
      * 打印所有内容
      * @param buffer
-     *//*
-
+     */
     public static void debugAll(ByteBuffer buffer) {
         int oldlimit = buffer.limit();
         buffer.limit(buffer.capacity());
@@ -85,12 +84,10 @@ public class ByteBufferUtil {
         buffer.limit(oldlimit);
     }
 
-    */
-/**
+    /**
      * 打印可读取内容
      * @param buffer
-     *//*
-
+     */
     public static void debugRead(ByteBuffer buffer) {
         StringBuilder builder = new StringBuilder(256);
         appendPrettyHexDump(builder, buffer, buffer.position(), buffer.limit() - buffer.position());
@@ -178,4 +175,3 @@ public class ByteBufferUtil {
         return (short) (buffer.get(index) & 0xFF);
     }
 }
-*/
